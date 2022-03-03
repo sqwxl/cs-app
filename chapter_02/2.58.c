@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <assert.h>
 
 typedef unsigned char *byte_pointer;
 
@@ -24,6 +25,8 @@ int main() {
   } else {
     printf("this is a big-endian machine\n");
   }
+
+  assert(is_little_endian());
 
   return 0;
 }
